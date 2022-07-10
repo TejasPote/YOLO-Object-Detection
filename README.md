@@ -1,0 +1,4 @@
+# YOLO-Object-Detection
+"You Only Look Once" (YOLO) is a popular algorithm because it achieves high accuracy while also being able to run in real time. This algorithm "only looks once" at the image in the sense that it requires only one forward propagation pass through the network to make predictions. After non-max suppression, it then outputs recognized objects together with the bounding boxes.
+It runs an input image through a CNN which outputs a 19 x 19 x 5 x 85 dimensional volume.The encoding can be seen as a grid where each of the 19 x 19 cells contains information about 5 boxes.
+We then filter through all the boxes using non-max suppression. Specifically, we use score thresholding on the probability of detecting a class to keep only accurate (high probability) boxes and Intersection over Union (IoU) thresholding to eliminate overlapping boxes.
